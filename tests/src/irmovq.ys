@@ -1,0 +1,14 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    irmovq $0x1, %rax
+    irmovq $0xF, %rbx
+    irmovq $0x1234, %rcx
+    irmovq $0x1122334455667788, %rdx
+    irmovq $0x8877665544332211, %rsi
+    irmovq $0xFFFFFFFFFFFFFFFF, %rdi
+    irmovq $0x0, %rbp
+    irmovq $0xDEADBEEF, %rsp
+    halt

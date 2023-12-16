@@ -1,0 +1,18 @@
+.pos 0x000 code
+  jmp 0x100
+
+.pos 0x100 code
+_start:
+  irmovq outval, %rsi
+  iotrap 0
+  iotrap 0
+  iotrap 5
+  irmovq inval, %rdi
+  iotrap 1
+  halt
+
+.pos 0x300 data
+outval:
+  .quad 0x59
+inval:
+  .quad 0x0

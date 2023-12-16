@@ -1,0 +1,17 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x250 code
+_start:
+    irmovq _stack, %rsp
+    call main
+    halt
+
+main:
+    irmovq $0x2, %rax
+    irmovq $0x3, %rcx
+    addq %rcx, %rax
+    ret
+
+.pos 0xf00 stack
+_stack:

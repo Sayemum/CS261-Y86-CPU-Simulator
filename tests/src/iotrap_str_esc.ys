@@ -1,0 +1,10 @@
+.pos 0x100 code
+_start:
+    irmovq str, %rsi
+    iotrap 4
+    iotrap 5
+    halt
+
+.pos 0x300 rodata
+str:
+    .string "hello!\nab\tc\n'str\\ing'\n\0done"

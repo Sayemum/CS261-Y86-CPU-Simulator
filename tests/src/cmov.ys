@@ -1,0 +1,40 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    irmovq _stack, %rsp
+
+    irmovq $1, %rax         # positive number
+    andq %rax, %rax         # set CC
+    call dotest
+
+    irmovq $-1, %rax        # negative number
+    andq %rax, %rax         # set CC
+    call dotest
+
+    irmovq $0, %rax         # zero
+    andq %rax, %rax         # set CC
+    call dotest
+
+    halt
+
+dotest:
+    irmovq $1, %rax
+    irmovq $0, %rdx
+    cmovle %rax, %rdx
+    irmovq $0, %rdx
+    cmovl %rax, %rdx
+    irmovq $0, %rdx
+    cmove %rax, %rdx
+    irmovq $0, %rdx
+    cmovne %rax, %rdx
+    irmovq $0, %rdx
+    cmovge %rax, %rdx
+    irmovq $0, %rdx
+    cmovg %rax, %rdx
+    ret
+
+.pos 0xf00 stack
+_stack:
+

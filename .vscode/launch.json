@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/y86",
+            //"args": [ "-d", "tests/inputs/simple.o" ],
+            //"args": [ "-E", "tests/inputs/opq_of.o" ],
+            "args": [ "-E", "tests/inputs/memreg.o" ],
+            // "args": [ "-E", "basic-test.o" ],
+            "cwd": "."
+        }
+    ]
+}

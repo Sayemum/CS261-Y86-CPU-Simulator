@@ -1,0 +1,6 @@
+  0x100:                      | .pos 0x100 code
+  0x100:                      | _start:
+  0x100: 30f30600000000000000 |     irmovq $6, %rbx
+  0x10a: 30f00500000000000000 |     irmovq $5, %rax
+  0x114: 6130                 |     subq %rbx, %rax
+  0x116: 00                   |     halt

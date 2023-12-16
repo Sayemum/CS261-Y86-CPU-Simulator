@@ -1,0 +1,10 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x118 code
+_start:
+    nop
+    halt
+
+.pos 0x13a data
+    .quad 12345

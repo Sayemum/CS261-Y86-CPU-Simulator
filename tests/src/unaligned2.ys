@@ -1,0 +1,12 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x555 code
+_start:
+    irmovq $333, %rax
+    irmovq $222, %rbx
+    irmovq $111, %rcx
+    halt
+
+.pos 0x987 data
+    .quad 0xaabbccdd

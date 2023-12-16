@@ -1,0 +1,15 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    irmovq $5, %rax
+    irmovq $5, %rbx
+    irmovq $5, %rcx
+    irmovq $5, %rdx
+    irmovq $3, %rdi
+    addq %rdi, %rax
+    subq %rdi, %rbx
+    andq %rdi, %rcx
+    xorq %rdi, %rdx
+    halt

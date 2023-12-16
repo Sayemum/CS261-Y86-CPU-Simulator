@@ -1,0 +1,13 @@
+Usage: ../y86 <option(s)> mini-elf-file
+ Options are:
+  -h      Display usage
+  -H      Show the Mini-ELF header
+  -a      Show all with brief memory
+  -f      Show all with full memory
+  -s      Show the program headers
+  -m      Show the memory contents (brief)
+  -M      Show the memory contents (full)
+  -d      Disassemble code contents
+  -D      Disassemble data contents
+  -e      Execute program
+  -E      Execute program (trace mode)

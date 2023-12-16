@@ -1,0 +1,14 @@
+.pos 0x000 code
+  jmp 0x100
+
+.pos 0x100 code
+_start:
+  irmovq outval, %rsi
+  iotrap 4
+  iotrap 4
+  iotrap 5
+  halt
+
+.pos 0x300 rodata
+outval:
+  .string "abcdefgh"

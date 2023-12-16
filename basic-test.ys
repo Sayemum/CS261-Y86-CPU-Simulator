@@ -1,0 +1,6 @@
+.pos 0x100 code
+_start:
+    irmovq $6, %rbx
+    irmovq $5, %rax
+    subq %rbx, %rax
+    halt

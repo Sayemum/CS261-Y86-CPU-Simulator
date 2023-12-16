@@ -1,0 +1,48 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    irmovq _stack, %rsp
+
+    irmovq $1, %rax         # positive number
+    andq %rax, %rax         # set CC
+    call dotest
+
+    irmovq $-1, %rax        # negative number
+    andq %rax, %rax         # set CC
+    call dotest
+
+    irmovq $0, %rax         # zero
+    andq %rax, %rax         # set CC
+    call dotest
+
+    halt
+
+dotest:
+    jmp posjmp
+    nop
+posjmp:
+    jle posle
+    nop
+posle:
+    jl posl
+    nop
+posl:
+    je pose
+    nop
+pose:
+    jne posne
+    nop
+posne:
+    jge posge
+    nop
+posge:
+    jg posg
+    nop
+posg:
+    ret
+
+.pos 0xf00 stack
+_stack:
+

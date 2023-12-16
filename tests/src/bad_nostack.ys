@@ -1,0 +1,13 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    call foo
+    halt
+
+foo:
+    ret
+
+.pos 0xf00 stack
+_stack:

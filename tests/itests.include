@@ -1,0 +1,41 @@
+# list of integration tests
+#  format: run_test <TAG> <ARGS>
+#    <TAG>      used as the root for all filenames (i.e., "expected/$TAG.txt")
+#    <ARGS>     command-line arguments to test
+
+run_test    D_help                  "-h"
+run_test    D_nop_hlt               "-e inputs/nop_hlt.o"
+run_test    D_nop_hlt_debug         "-E inputs/nop_hlt.o"
+run_test    C_irmovq                "-e inputs/irmovq.o"
+run_test    C_irmovq_debug          "-E inputs/irmovq.o"
+run_test    C_opq                   "-e inputs/opq.o"
+run_test    C_opq_debug             "-E inputs/opq.o"
+run_test    B_pushpop               "-e inputs/pushpop.o"
+run_test    B_pushpop_debug         "-E inputs/pushpop.o"
+run_test    B_memreg                "-e inputs/memreg.o"
+run_test    B_memreg_debug          "-E inputs/memreg.o"
+run_test    B_simple                "-e inputs/simple.o"
+run_test    B_simple_entry          "-e inputs/simple_entry.o"
+run_test    B_func_debug            "-E inputs/func.o"
+run_test    A_cmov_debug            "-E inputs/cmov.o"
+run_test    A_cjmp_debug            "-E inputs/cjmp.o"
+run_test    A_opq_of_debug          "-E inputs/opq_of.o"
+run_test    A_movflags_debug        "-E inputs/movflags.o"
+run_test    A_pushpop_rsp_debug     "-E inputs/pushpop_rsp.o"
+run_test    A_bad_addr              "-e inputs/bad_addr.o"
+run_test    A_bad_addr_debug        "-E inputs/bad_addr.o"
+run_test    A_bad_insn              "-e inputs/bad_insn.o"
+run_test    A_bad_insn_debug        "-E inputs/bad_insn.o"
+run_test    A_bad_nostack           "-e inputs/bad_nostack.o"
+run_test    A_missing_file          "-e"
+run_test    A_both_flags            "-e -E inputs/simple.o"
+run_test    A_extra_params          "-e inputs/nop_hlt.o extra params"
+run_test    A_unaligned1            "-e inputs/unaligned.o"
+run_test    A_unaligned2            "-e inputs/unaligned2.o"
+run_test    A_iotrap_char_debug     "-E inputs/iotrap_char.o" <inputs/iotrap_char.txt
+run_test    A_iotrap_dec_debug      "-E inputs/iotrap_dec.o"  <inputs/iotrap_dec.txt
+run_test    A_iotrap_dec_bad        "-e inputs/iotrap_dec.o"  <inputs/iotrap_char.txt
+run_test    A_iotrap_str_debug      "-E inputs/iotrap_str.o"
+run_test    A_iotrap_escaped_string "-e inputs/iotrap_str_esc.o"
+run_test    A_iotrap_buf_debug      "-E inputs/iotrap_buf.o"
+run_test    A_iotrap_buf2_debug     "-E inputs/iotrap_buf2.o"
