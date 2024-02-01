@@ -1,6 +1,6 @@
-Y86 CPU Simulator
+**Y86 CPU Simulator**
 
-Context:
+**CONTEXT**
 
 The x86 architecture is a complex instruction set architecture. Intel initially developed it based on the Intel 8086 microprocessor and its 8088 variant.
 The x86 architecture is relevant to computers because it is the foundation of most personal computers and servers in use today. It is a versatile and powerful architecture that has been refined over the years to provide better performance and more features.
@@ -23,6 +23,6 @@ The above image shows the changes being made using trace mode to see the changes
 
 Finally, we get to see the contents of virtual memory. It's very massive due to the size of virtual memory we allocated for the CPU, which is why the image shows an abridged version of the actual results.
 
-Conclusion:
+**CONCLUSION**
 
 This Y86 Miniature CPU took a whole semester to create and it demonstrates the complexities of instruction set architecture.
